@@ -59,7 +59,7 @@ i.fa.fa-quote-left,i.fa.fa-quote-right {font-size: 12px; color:#666; margin-left
 blockquote {border:none;}
 blockquote p {font-size: 14px; font-weight: 400; font-style: italic; color:#666; letter-spacing: 1px;}
 
-div.logo {text-align: center; font-size: 70px; font-weight: 800; color:#fbfbfb;}
+div.logo {text-align: center; font-size: 70px; font-weight: 800; color:#fbfbfb; cursor: pointer;}
 div.logo span { position: relative; top:-35px; left:-10px; font-size: 22px; display: block; text-align: center; width:40px; height: 40px; margin:0 auto; padding-top: 2px; font-style: italic; background: #111; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;}
 
 ul.candidates { list-style: none; padding: 0; text-align: center;}
@@ -176,11 +176,11 @@ div.why div.controls {top:85px; left:-15px;}
 .why-share-wrap ol li {margin-bottom: 10px;}
 .modal-content {-webkit-border-radius: 5px !important; -moz-border-radius: 5px !important; border-radius: 5px !important;}
 
-.manifest .well {padding: 50px; padding-top: 20px;}
+.manifest .well {padding: 50px; padding-top: 20px; margin-bottom: 80px; padding-bottom:120px;}
 .manifest h2 {text-align: left; text-transform: uppercase; padding-left: 40px;}
 .manifest ul {list-style: none; margin: 0; padding:0;}
 .manifest ul li {margin-bottom: 10px; padding-left: 0; text-align: justify;}
-
+.manifest .fb-like {padding-left: 40px; margin-top:20px; margin-bottom: 40px; position: absolute; clear: both; display: block !important; visibility: visible !important;}
 
 button.more {display: block; margin:0 auto; margin-top:15px; margin-bottom: 15px;}
 
@@ -196,3 +196,5 @@ button.ok {clear:both; right: 30px; display: block;}
 	div.argument div.controls { margin-top:37px;}
 }
 
+h1.cta {margin-bottom: 30px;}
+h1.cta span {color:red; font-size: 42px; font-weight: 800; text-transform: uppercase;}

@@ -1,0 +1,198 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {display: none !important;}
+
+body {font-family: "font-family: 'Open Sans', sans-serif;", sans-serif; background-color:#fff;  overflow-x:hidden;}
+a {outline: none !important;}
+
+
+
+
+.candidate .img {background: url(//static.votez.pe/sprite.png); width:150px; height: 150px;}
+
+.candidate.ponta .img { background-position: 		0px 0px; }
+.candidate.iohannis .img { background-position:  -150px 0px; }
+.candidate.macovei .img{ background-position: 	 -300px 0px; }
+.candidate.hunor .img{ background-position: 	 -450px 0px; }
+.candidate.tariceanu .img{ background-position:  -600px 0px; }
+.candidate.udrea .img { background-position: 	    -0px -150px; }
+.candidate.diaconescu .img { background-position: -150px -150px; }
+.candidate.melescanu .img { background-position:  -300px -150px; }
+.candidate.branza .img { background-position: 	  -450px -150px; }
+.candidate.vadim .img { background-position: 	  -600px -150px; }
+.candidate.zsolt .img { background-position: 	   -0px -300px; }
+.candidate.rotaru .img { background-position: 	 -150px -300px; }
+.candidate.amaritei .img { background-position:  -300px -300px; }
+.candidate.funar .img { background-position: 	 -450px -300px; }
+.candidate.niciunul .img { background-position: 	 -600px -300px; }
+
+.candidate.ponta.bw .img { background-position: 	   0px -450px; }
+.candidate.iohannis.bw .img { background-position: 	-150px -450px; }
+.candidate.macovei.bw .img { background-position: 	-300px -450px; }
+.candidate.hunor.bw .img { background-position:  	-450px -450px; }
+.candidate.tariceanu.bw .img { background-position: -600px -450px; }
+.candidate.udrea.bw .img { background-position:    	   -0px -600px; }
+.candidate.diaconescu.bw .img { background-position: -150px -600px; }
+.candidate.melescanu.bw .img { background-position:  -300px -600px; }
+.candidate.branza.bw .img { background-position: 	 -450px -600px; }
+.candidate.vadim.bw .img { background-position: 	 -600px -600px; }
+.candidate.zsolt.bw .img { background-position: 	  -0px -750px; }
+.candidate.rotaru.bw .img { background-position: 	-150px -750px; }
+.candidate.amaritei.bw .img { background-position: 	-300px -750px; }
+.candidate.funar.bw .img { background-position: 	-450px -750px; }
+.candidate.niciunul.bw .img { background-position: 	-600px -750px; }
+
+.wrapper {margin-top:15px;}
+
+.clearfix {clear:both;}
+
+.round {-webkit-border-radius: 5px !important; -moz-border-radius: 5px !important; border-radius: 5px !important;}
+.vot-panel {margin:0 auto; overflow: hidden; margin-bottom: 10px;}
+
+.vote-stamp {width:95px; height: 95px; background: url(//static.votez.pe/stamp-votat.png); position: absolute; left:50%; margin-left: -20px; top: 66px; }
+.jumbotron, .well {overflow: hidden;}
+
+h1 {text-align: center; font-size: 34px !important;}
+.sweet-alert h2 {font-size: 18px;}
+
+i.fa {margin-right: 10px;}
+i.fa.fa-quote-left,i.fa.fa-quote-right {font-size: 12px; color:#666; margin-left:10px; margin-right: 10px; font-style: italic;}
+
+blockquote {border:none;}
+blockquote p {font-size: 14px; font-weight: 400; font-style: italic; color:#666; letter-spacing: 1px;}
+
+div.logo {text-align: center; font-size: 70px; font-weight: 800; color:#fbfbfb;}
+div.logo span { position: relative; top:-35px; left:-10px; font-size: 22px; display: block; text-align: center; width:40px; height: 40px; margin:0 auto; padding-top: 2px; font-style: italic; background: #111; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;}
+
+ul.candidates { list-style: none; padding: 0; text-align: center;}
+ul.candidates li {border:0px solid green; display: inline-block; margin:5px; padding: 0px;}
+ul.candidates li a:hover { text-decoration: none;}
+
+.candidate {width:150px; height:220px; cursor: pointer; position: relative; overflow: hidden; }
+.candidate:hover { }
+.candidate .footer { position: relative; text-align: center; font-size: 12px; font-weight: bold; color:#000; width:100%; margin-top: 5px;}
+.candidate .footer .name { font-size: 16px;}
+.candidate .footer .org {font-size: 11px; font-weight: normal;}
+
+.candidate-page .candidate {cursor: auto; margin-top: 0; margin:0 auto; float: none; display: block; width:300px;}
+.candidate-page .candidate .img {margin:0 auto;}
+.candidate-page .candidate .name { color:#fff; font-size: 20px; font-weight: 600;}
+.candidate-page .candidate .org { color:#fff; font-size: 12px;}
+
+.candidate-page .cwrap {width:300px; margin:0 auto;position: relative; display: block; overflow: hidden; margin-top: -40px;}
+
+.candidate-page .why {margin-top: 20px; position: relative; display: block; clear: both;}
+.candidate-page button.vote {margin:0 auto; float: none; display: block; margin-bottom: 20px; visibility: visible;}
+
+.candidate-page .argument-wrap {display: block; overflow: hidden; clear: both;}
+.candidate-page textarea#argument { height: 90px; margin-bottom: 10px; margin-top:10px !important; color:#fff; font-size: 16px; font-weight: 100; letter-spacing: 2px; border:3px solid #fff; padding:10px; resize: none;}
+.candidate-page textarea#argument[readonly] {background: none; cursor: default;}
+.candidate-page label[for=argument] { text-align: center !important; font-size:20px; font-weight: 600; width:100%; margin:0; top: 0px; position: relative;}
+.candidate-page span.counter {float: right; bottom:0; color:#999; top: 85px; right: 10px; font-size: 14px; font-weight: normal; position: relative;}
+.candidate-page button.send { background: #fff; display: block; position: relative; float: right; margin-top: -30px; clear: both;}
+
+.candidate-page a.me {float:left; position: absolute; margin-top:45px; left:-80px; width: 60px; height: 60px;}
+.candidate-page a.me img {-webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px;}
+
+.candidate-page a.home {color:#fff; text-transform: uppercase; font-size: 12px; position: relative; top: 60px; z-index: 100;}
+.candidate-page a.home:hover {text-decoration: none;}
+.candidate-page a.home i {font-size:30px; color:#fff; display: block; margin-bottom: 5px; width: 80px;}
+.candidate-page a {text-decoration: none;}
+.candidate-page a:hover {color:inherit;}
+
+.candidate-page .argument.selected {background: none; color:#fff; font-size: 14px; font-weight: 100; letter-spacing: 1px; border:2px solid #fff; margin-bottom: 10px;}
+.candidate-page .argument.selected:hover {cursor: default; border:2px solid #fff;}
+.candidate-page .argument.selected .controls {width:175px;}
+.candidate-page .argument.selected .controls ul li {cursor: pointer;}
+
+.candidate-page .spinner-wrap {width: 50px; height: 50px; right:0; top:190px; position: absolute;}
+
+.row.candidate-page.quote {background: #fff; color:#000; border-bottom:5px solid #444;}
+
+.row.candidate-page {background: #150055; color:#fff;}
+/*.row.candidate-page {background: #20202F;}*/
+
+.row.score { background: #ea2f31;}
+.row.score .scores {float:left; font-size: 20px; font-weight: 800; text-transform: uppercase; margin-right: 20px; padding: 0; top:7px; position: relative;}
+.row.score span.label {color:#fff; font-size: 18px; font-weight: 800; padding:0; margin:0; opacity: 0.5;}
+.row.score .percent { float:right; font-size: 30px; font-weight: 800;}
+
+/*
+.row.candidate-page.ponta {background: #ea2f31; color:#fff;}
+.row.candidate-page.score.ponta {}*/
+
+.row.feed {background: #fff;}
+div.argument {width:85%; border:1px solid #a9a9a9; height: 65px; padding:10px; margin-top:15px; background: #f2f2f2; color:#959595; cursor: pointer; position: relative;}
+div.argument:hover {border:1px solid #000;}
+div.argument .content {height:40px;}
+div.argument .user {top:-42px; left:15px; position: relative;}
+div.argument .user a.me img {width:40px; height: 40px;}
+div.controls {position: relative; margin:0; height: 65px; padding:0; float:right; margin-right:-195px; margin-top:15px; width:170px; top: -70px;}
+div.controls .pager {float:left;}
+div.controls .pager li {font-size: 12px;}
+div.controls .pager li.up a {color:#4285f4;}
+div.controls .pager li.down a {color:#ea2f31;}
+div.why div.controls {top:85px; left:-15px;}
+
+.popover {border-radius: 4px; background: #ea2f31; border-color:#ea2f31;}
+.popover-content { color: #fff; font-size: 14px; text-align: center; text-transform: uppercase;}
+.popover.left .arrow:after,
+.tooltip.left .arrow:after,
+.popover.left .tooltip-arrow,
+.tooltip.left .tooltip-arrow {
+  border-left-color: #ea2f31;
+}
+.popover.right .arrow:after,
+.tooltip.right .arrow:after,
+.popover.right .tooltip-arrow,
+.tooltip.right .tooltip-arrow {
+  border-right-color: #ea2f31;
+}
+.popover.top .arrow:after,
+.tooltip.top .arrow:after,
+.popover.top .tooltip-arrow,
+.tooltip.top .tooltip-arrow {
+  border-top-color: #ea2f31;
+}
+.popover.bottom .arrow:after,
+.tooltip.bottom .arrow:after,
+.popover.bottom .tooltip-arrow,
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #ea2f31;
+}
+
+
+.progress {height: 6px;-webkit-border-radius: 3px !important; -moz-border-radius: 3px !important; border-radius: 3px !important; margin:0;}
+.panel {padding:10px; margin:0; margin-bottom: 15px; background: #f2f2f2}
+.panel .panel-body {padding:0;}
+
+
+.candidate-page .social {margin: 5px; position: relative; display: block;overflow: hidden;}
+.candidate-page .social button {position: relative; margin:0;}
+.candidate-page .social button.share {margin-bottom: 15px !important;}
+.candidate-page .social button.invite {float:right;}
+
+.candidate-page .social a.why-share {display: block; cursor: pointer; clear: both; margin:0; padding:5px; font-weight: bold;}
+.why-share-wrap {padding: 15px; padding-top:25px;}
+.why-share-wrap h2 {margin-top:0; padding: 0;}
+.why-share-wrap ol li {margin-bottom: 10px;}
+.modal-content {-webkit-border-radius: 5px !important; -moz-border-radius: 5px !important; border-radius: 5px !important;}
+
+.manifest .well {padding: 50px; padding-top: 20px;}
+.manifest h2 {text-align: left; text-transform: uppercase; padding-left: 40px;}
+.manifest ul {list-style: none; margin: 0; padding:0;}
+.manifest ul li {margin-bottom: 10px; padding-left: 0; text-align: justify;}
+
+
+button.more {display: block; margin:0 auto; margin-top:15px; margin-bottom: 15px;}
+
+button.ok {clear:both; right: 30px; display: block;}
+
+
+@media (min-width: 320px) and (max-width: 768px) { 
+	button.invite { float: left !important; }
+	.scores {height: 40px;}
+	.row.score span.label {font-size: 12px; font-weight: 800; }
+	.row.score .percent { font-size: 22px; font-weight: 800; padding-top: 8px;}
+	div.argument {width:70%;  height: auto; min-height: 100px;}
+	div.argument div.controls { margin-top:37px;}
+}
+

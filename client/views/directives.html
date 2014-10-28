@@ -1,0 +1,21 @@
+<template name="candidate-directive">
+	<div class="candidate [[info.slug]]" ng-class="light" ng-mouseover="light=''" ng-mouseleave="light='bw'">
+		<div class="img"></div>
+		<div class="vote-stamp" ng-show="vote == info._id"></div>
+		<div class="footer">
+			<div class="name">[[info.name]]</div>
+			<div class="org">&nbsp;[[info.org]]&nbsp;</div>
+		</div>
+	</div>
+</template>
+
+<template name="vp-progress-directive">
+	<div class="panel panel-default">				
+	    <div class="panel-body text-muted">
+	        <span><strong class="text-warning">[[total | number]]</strong> persoane au votat.</span>
+	        <span class="pull-right"><strong>[[max | number]]</strong></span>
+	        <progressbar type="warning" value="[[percent]]" class="round"></progressbar>
+	        <span class="pull-right"><strong class="text-warning">[[days]] zile</strong> ramase</span>
+	    </div>			    
+	</div>	
+</template>

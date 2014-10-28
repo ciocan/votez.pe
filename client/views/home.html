@@ -1,0 +1,57 @@
+<template name="home.html">
+
+	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 cols-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+	<div class="row">					
+			<div class="well">
+    			<blockquote>
+				    <p><i class="fa fa-quote-left"></i>[[quote.title]]<i class="fa fa-quote-right"></i></p>
+				    <a href="[[quote.url]]" target="_blank"><small class="pull-right">[[quote.author]]</small></a>
+				</blockquote>
+			</div>
+
+			<ul class="candidates">
+				<li ng-repeat="candidate in candidates" class="animate">
+					<a href="/[[candidate.slug]]">
+						<candidate info="candidate" light="bw" vote="myVote.v"></candidate>
+					</a>
+				</li>			
+			</ul>
+
+			<div class="row manifest">
+					<div class="well">
+						
+					<h2>De ce sa votez?</h2>
+					<ol>
+						<li>
+							<h3>Impreuna suntem mai puternici</h3>
+						Chiar daca mergi zi de zi cu bicicleta, probabil ca nu vei influenta emisiile globale intr-un mod considerabil. La fel cum nici un singur vot, probabil ca nu va face intreaga diferenta. Important este, insa, sa realizezi ca faci parte dintr-o comunitate care poate influenta deznodamantul lucrurilor. Nu e vorba doar de tine. Schimbarea va veni atunci cand toti vom contribui in mod egal la aceasta cauza.
+						</li>
+
+						<li>
+							<h3>Cea mai rea decizie este sa nu votezi deloc</h3>
+							Daca votezi sau iti anulezi votul vei fi trecut undeva, intr-o statistica. Ai intrat in joc. Candidatii din urmatorii ani vor sti ca segmentul din care faci parte nu poate fi ignorat complet. Doar asa vom putea scapa de sticla cu ulei si pachetul cu faina - vesnicii candidati.
+						</li>
+							
+						<li>
+							<h3>Numerele nu sunt in favoarea noastra</h3>
+							Prezenta la vot in Romania este forte mica. Multi din cei care s-au inghesuit pana acum au fost motivati de promisiuni electorale, pomeni in genul celor mai sus amintite si prin strategii josnice de manipulare. Insa lupta nu e impotriva lor. Lupta e impotriva celor carora acest mediu le convine. Nu valida opinia populara prin tacere.
+						</li>
+
+						<li>
+							<h3>Nu tot timpul ne-a fost atat de usor</h3>
+							Pentru o tara otravita atata vreme de comunism suntem nepermis de cinici. In 1864 era vot cenzitar si votau doar cei cu venituri mari. Femeile au primit acest drept abia in 1939. Iar dupa 23 august 1944 am pierdut si putinul pe care il aveam. Voteaza azi pentru toti cei care n-au putut vota ieri si pentru ca altii s-o faca si maine
+						</li>
+
+						<li>
+							<h3>Nu ne permitem inca 5 ani in directia gresita</h3>
+							Sa nu ne mintim singuri. Sanatatea, educatia, justitia si nivelul de trai din Romania nu pot fi comparate cu echivalentele lor Europene. De ce suntem ultimii in toate statisticile?  Raspunsul e simplu: in Romania s-a furat mai mult decat s-a facut. Ei bine, daca vom fi complici la inca 5 ani de furt si minciuna sansele de revenire la normalitate vor fi din ce in ce mai mici.
+						</li>
+					</ol>				
+
+					</div>
+			</div>
+
+		</div>
+	</div>
+
+</template>

@@ -1,0 +1,137 @@
+<template name="candidate.html">
+
+	<!-- vote progress -->
+	<div class="row candidate-page quote">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 cols-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+			<vp-progress total="total()"></vp-progress>
+		</div>
+	</div>
+
+	<!-- candidate page -->
+	<div class="row candidate-page [[candidate.slug]]">
+	
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 cols-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+
+			<div class="logo">VOTEZ<span>pe</span></div>
+
+			<a class="home" href="/"><i class="icon icon-material-apps"></i> alt candidat</a>
+		
+			<div class="spinner-wrap">
+				<div class="spinner" ng-show="spinner == true">
+				  <div class="double-bounce1"></div>
+				  <div class="double-bounce2"></div>
+				</div>				
+			</div>
+
+			<div class="cwrap">
+				<a href="/[[slug]]">
+					<candidate info="candidate" vote="myVote.v"></candidate>
+				</a>
+			</div>
+
+			<!-- vote action -->
+			<button ng-cloak type="button" class="btn btn-primary vote" ng-click="voteFor(candidate)" ng-hide="myVote"><i class="fa fa-facebook-square fa-lg"></i>Votez pe [[candidate.name]]</button>
+
+			<!-- myVote -->
+	        <div class="form-group why" ng-show="candidate._id == myVote.v">
+            	<label for="argument">pentru că:</label>
+            	<span class="counter" ng-hide="myVote.a">[[140 - argument.length]]</span>
+	        	
+	        	<a href="http://fb.com/[[me]]" target="_blank" class="me" ng-show="!anonim || myVote.f">
+	        		<img ng-src="[[myfbpic]]" alt="" ng-show="!anonim || myVote.f">
+	        	</a>
+                
+				<div class="controls" ng-show="myVote.a">
+					<ul class="pager">
+					    <li class="up"><a><i class="fa fa-thumbs-up"></i> [[myVote.cu]]</a></li>
+					    <li class="down"><a><i class="fa fa-thumbs-down"></i> [[myVote.cd]]</a></li>
+					</ul>					
+				</div>
+
+				<div class="argument-wrap">
+	                <textarea ng-cloak ng-model="argument" ng-readonly="myVote.a" class="form-control round" rows="3" id="argument" placeholder="Scrie aici de ce votezi pe [[candidate.name]]" maxlength="140"></textarea>
+
+	                <div class="checkbox" ng-hide="myVote.a" ng-cloak>
+	                    <label>
+	                        <input type="checkbox" ng-model="anonim"> Raman anonim
+	                    </label>
+	            	</div>
+	                <button class="btn btn-default btn-raised send" ng-click="updateArgument()" ng-hide="myVote.a" ng-cloak>Trimite</button>
+                </div>
+	        </div>
+
+			<!-- selected vote -->
+			<div class="argument selected round" ng-show="selectedArgument">
+				<div class="user" ng-show="selectedArgument.f">
+					<a href="http://fb.com/[[selectedArgument.f]]" target="_blank" class="me">
+		        		<img ng-src="[[fbpic(selectedArgument.f)]]" alt="" ng-show="selectedArgument.f">
+		        	</a>
+				</div>
+				<div class="content">[[selectedArgument.a]]</div>
+				<div class="controls">
+					<ul class="pager">
+					    <li class="up"><a ng-click="thumbs(selectedArgument._id, 1)"><i class="fa fa-thumbs-up"></i> [[selectedArgument.cu]]</a></li>
+					    <li class="down"><a ng-click="thumbs(selectedArgument._id, -1)"><i class="fa fa-thumbs-down"></i> [[selectedArgument.cd]]</a></li>
+					</ul>					
+				</div>
+			</div>			
+
+
+			<!-- social  -->
+			<div ng-cloak class="social" ng-show="myVote">
+				<button type="button" class="btn btn-primary share pull-left" ng-click="share()"><i class="fa fa-facebook-square fa-lg"></i>Distribuie pe Facebook</button>
+
+				<button type="button" class="btn btn-success invite" ng-click="invite()"><i class="fa fa-facebook-square fa-lg"></i>Invita prietenii sa voteze</button>
+				<a ng-click="whyShare()" class="why-share pull-right">De ce sa invit?</a>
+			</div>
+
+		</div>
+	</div>
+	
+	<!-- vote counts -->
+	<div class="row candidate-page score [[candidate.slug]]" ng-cloak>	
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 cols-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+			<div class="scores">
+				<span ng-hide="myVote" popover="Voteaza ca sa vezi!" popover-trigger="mouseenter">???</span>
+				<span ng-show="myVote">[[allVotes(candidate._id) | number]]</span>
+				<span class="label">voturi</span>
+			</div>
+			<div class="scores">
+				<span ng-hide="myVote" popover="Voteaza ca sa vezi!" popover-trigger="mouseenter">???</span>
+				<span ng-show="myVote">[[allArguments(candidate._id) | number]]</span> 
+				<span class="label">argumente</span>
+			</div>
+			<div class="percent">
+				<span ng-hide="myVote" popover="Voteaza ca sa vezi!" popover-trigger="mouseenter">???</span>
+				<span ng-show="myVote">[[percent(candidate._id) | number:1]]</span>
+				<span>%</span>
+			</div>
+		</div>
+	</div>
+	
+	<!-- arguments feed -->
+	<div class="row candidate-page feed [[candidate.slug]]">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 cols-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+			<div class="argument round animate" ng-repeat="argument in argumentsList | filter:{v: candidate._id} | orderBy:'cu':true">
+				<div class="user" ng-show="argument.f">
+					<a href="http://fb.com/[[argument.f]]" target="_blank" class="me">
+		        		<img ng-src="[[fbpic(argument.f)]]" alt="" ng-show="argument.f">
+		        	</a>
+				</div>
+				<a href="/[[slug]]/[[argument._id]]" class="text-muted">
+					<div class="content">[[argument.a]]</div>
+				</a>
+				<div class="controls">
+					<ul class="pager">
+					    <li class="up"><a ng-click="thumbs(argument._id, 1)"><i class="fa fa-thumbs-up"></i> [[argument.cu]]</a></li>
+					    <li class="down"><a ng-click="thumbs(argument._id, -1)"><i class="fa fa-thumbs-down"></i> [[argument.cd]]</a></li>
+					</ul>					
+				</div>
+			</div>			
+			<div class="clearfix">
+				<button class="btn btn-default raised more" ng-click="loadMore()" ng-hide="" ng-cloak>Incarca mai multe</button>
+			</div>
+		</div>
+	</div>
+
+</template>
